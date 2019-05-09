@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            list-style: none;
+        }
+
+        ul {
+            width: 80%;
+            margin: auto;
+            position: relative;
+        }
+
+        li {
+            width: 46%;
+            margin-bottom: 20px;
+            outline: 1px solid #ccc;
+            float: left;
+            position: relative;
+        }
+
+        li:nth-child(even) {
+            float: right;
+            margin-top: 30px;
+        }
+
+        li::before {
+            content: '';
+            display: block;
+            position: absolute;
+            width: 2px;
+            height: 100%;
+            background-color: #ccc;
+            right: -8%;
+        }
+
+        li:nth-child(even):before {
+            content: '';
+            display: block;
+            position: absolute;
+            width: 2px;
+            height: 100%;
+            background-color: #ccc;
+            left: -10%;
+        }
+        li::after{
+            content: '';
+            position: absolute;
+            display: block;
+            width: 10%;
+            height: 2px;
+            right: -8%;
+            background-color: #f00;
+            top: 0;
+            bottom: 0;
+            margin: auto;
+        }
+        li:nth-child(even)::after{
+            left: -40px;
+            right: auto;
+        }
+
+    </style>
+</head>
+
+<body>
+    <ul class="t1">
+        <li>
+            <h3>title </h3>
+            <p>地白如文行關登紀熱西孩片做來。子告像深自府義來率，放認我故難去農程人術麼民洋的道？
+            </p>
+        </li>
+        <li>
+            <h3>title</h3>
+            <p>地白如文行關登紀熱西孩片做來。子告像深自府義來率，放認我故難去農程人術麼民洋的道？
+            </p>
+        </li>
+        <li>
+            <h3>title</h3>
+            <p>地白如文行關登紀熱西孩片做來。子告像深自府義來率，放認我故難去農程人術麼民洋的道？
+            </p>
+        </li>
+        <li>
+            <h3>title</h3>
+            <p>地白如文行關登紀熱西孩片做來。子告像深自府義來率，放認我故難去農程人術麼民洋的道？
+            </p>
+        </li>
+        <li>
+            <h3>title</h3>
+            <p>地白如文行關登紀熱西孩片做來。子告像深自府義來率，放認我故難去農程人術麼民洋的道？
+            </p>
+        </li>
+        <li>
+            <h3>title</h3>
+            <p>地白如文行關登紀熱西孩片做來。子告像深自府義來率，放認我故難去農程人術麼民洋的道？
+            </p>
+        </li>
+        <li>
+            <h3>title</h3>
+            <p>地白如文行關登紀熱西孩片做來。子告像深自府義來率，放認我故難去農程人術麼民洋的道？
+            </p>
+        </li>
+    </ul>
+</body>
+
+</html>

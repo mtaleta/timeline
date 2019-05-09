@@ -25,6 +25,8 @@
 
         .timeline li .pic {
             width: 46%;
+            position: relative;
+            z-index: 2;
         }
 
         .timeline li .pic img {
@@ -35,49 +37,66 @@
 
         .timeline li .txt {
             width: 46%;
-            background-color: #ccc;
             box-sizing: border-box;
             padding: 20px;
+            /* outline: 1px solid #ccc; */
         }
-
-        .timeline li::before {
+        .timeline li .txt h3{
+            margin-bottom: 10px;
+        }
+        .timeline li .txt h3::after {
             content: '';
             position: absolute;
-            width: 8%;
+            display: block;
             height: 2px;
+            width: 100%;
             background-color: #ccc;
-            top: 0;
-            bottom: 0;
             left: 0;
-            right: 0;
-            margin: auto;
-            
         }
-        .timeline li::after{
+        .timeline li::before{
             content: '';
-            height: 120%;
+            position: absolute;
             width: 2px;
-            background-color: #ccc;
             left: 0;
             right: 0;
-            position: absolute;
+            bottom: 0;
+            height: 120%;
+            background-color: #ccc;
             margin: auto;
         }
-        .timeline li:last-child:after{
-            bottom: 50%
+        .timeline li:last-child::before{
+            display: none;
         }
-        .timeline li .txt::after{
+        .timeline li:last-child h3{
+            position: relative;
+        }
+        .timeline li:last-child .txt h3::after{
+            position: absolute;
+            width: 200%;
+            right: -20px;
+            left: auto;
+        }
+        .timeline li:last-child .txt h3::before{
+            content: '';
+            width: 2px;
+            height: 350%;
+            background-color: #fcc;
+            left: -15%;
+            bottom: 0;
+            position: absolute;
+        }
+        .timeline li .txt p{
+            position: relative;
+        }
+        .timeline li .txt p::before{
             content: '';
             width: 20px;
             height: 20px;
-            border-radius: 50%;
             background-color: #ccc;
+            border-radius: 50%;
             position: absolute;
-            top: 0;
-            bottom: 0;
-            left: 0;
-            right: 0;
-            margin:auto;
+            left: -17%;
+            top: -1.2em;
         }
     </style>
 </head>
@@ -87,7 +106,7 @@
         <li>
             <div class="pic"><img src="http://lorempixel.com/320/200/nature" /> </div>
             <div class="txt">
-                <h3>title</h3>
+                <h3>t如文行關登紀熱西孩itle孩片做來。子告登紀熱西登紀熱西像深自府rgx </h3>
                 <p>地白如文行關登紀熱西孩片做來。子告像深自府義來率，放認我故難去農程人術麼民洋的道？
                 </p>
             </div>
